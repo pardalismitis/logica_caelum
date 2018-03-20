@@ -1,29 +1,24 @@
 <meta charset="utf-8">
-
 <script>
 //FUNCOES
     function valorInseridoPeloUsuario(){
         return parseFloat(prompt(mensagemPopUp).replace(",",".").replace("o","0"));
     }
-
     function pontoParaVirgula(){
         return valor.toFixed(2).replace(".",",");
     }
-
 //ALTURA
     document.write("<h4>ALTURA</h4>")
-    var mensagemPopUp = "Digite sua altura"
+    var mensagemPopUp = "Digite sua altura (m)"
     var altura = valorInseridoPeloUsuario();
     var valor = altura
     document.write("Altura: " + pontoParaVirgula())
-
 //PESO
     document.write("<h4>PESO</h4>")
-    var mensagemPopUp = "Digite seu peso";
+    var mensagemPopUp = "Digite seu peso (kg)";
     var peso = valorInseridoPeloUsuario();
     var valor = peso;
     document.write("Peso: " + pontoParaVirgula())
-
 //Indice de Massa Corporal
     document.write("<h4>IMC</h4>")
     var imc = peso/(altura*altura)
