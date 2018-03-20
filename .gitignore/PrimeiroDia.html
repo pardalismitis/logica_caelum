@@ -24,8 +24,11 @@
     document.write("<h4>Uber</h4>");
 
     var valor_padrao = 25.70;
+    var valor = valor_padrao
+    document.write("Valor padrão: R$ " + ConversaoDeMoeda() + "<br>")
+    
     var taxa_dinamica = 1.2;
-    document.write("Valor padrão: R$ " + valor_padrao.toFixed(2).replace(".",",") + "<br>")
-        document.write("Taxa dinâmica: " + taxa_dinamica + "<br>")
-    document.write("Valor total: R$ " + (valor_padrao*taxa_dinamica).toFixed(2).replace(".",","))    
+    var valor = valor_padrao*taxa_dinamica
+    document.write("Taxa dinâmica: " + taxa_dinamica + "<br>")
+    document.write("Valor total: R$ " + ConversaoDeMoeda())
 </script>
