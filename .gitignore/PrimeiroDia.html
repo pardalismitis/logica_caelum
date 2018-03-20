@@ -1,16 +1,16 @@
 <meta charset="utf-8">
 <script>
     function valorInseridoPeloUsuario(){
-        return parseFloat(prompt(PopUp).replace(",","."));
+        return parseFloat(prompt(mensagemPopUp).replace(",","."));
     }
     
-    var PopUp = "Digite a distância a ser percorrida"; 
+    var mensagemPopUp = "Digite a distância a ser percorrida"; 
     var distancia = valorInseridoPeloUsuario();
     document.write("<h4>Distância:</h4> " + distancia + " km");
 
     document.write("<h4>Carros</h4>");
     
-    var PopUp = "Digite o valor do estacionamento";
+    var mensagemPopUp = "Digite o valor do estacionamento";
     var estacionamento = valorInseridoPeloUsuario();
     var valor = estacionamento;
 
@@ -20,7 +20,7 @@
     
     document.write("Valor estacionamento: R$ " + conversaoDeMoeda() + "<br>");
     
-    var PopUp = "Digite o valor da gasolina";
+    var mensagemPopUp = "Digite o valor da gasolina";
     var gasolina = valorInseridoPeloUsuario();
     var valor = gasolina;
     document.write("Valor gasolina: R$ " + conversaoDeMoeda() + "<br>");
