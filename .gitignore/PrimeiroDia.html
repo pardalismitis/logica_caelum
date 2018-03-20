@@ -1,34 +1,44 @@
 <meta charset="utf-8">
 <script>
-    var distancia = 15;
-    document.write("Distância: " + distancia + "km");
-    document.write("<h4>Carros</h4>");
-    
-    var estacionamento = 15.00;
-    var valor = estacionamento;
-    function conversaoDeMoeda(){
-      var valor_convertido = valor.toFixed(2).replace(".",",");
-      return valor_convertido;
+    function popUpNum(){
+        var PopUp_Numero = parseFloat(prompt(PopUp).replace(",",".")); 
+        return PopUp_Numero
     }
     
-    document.write("Valor estacionamento: R$ " +conversaoDeMoeda() + "<br>");
+    var PopUp = "Digite a distância a ser percorrida"; 
+    var distancia = popUpNum();
+    document.write("<h4>Distância:</h4> " + distancia + " km");
+
+    document.write("<h4>Carros</h4>");
     
-    var gasolina = 15.00;
-    var valor = gasolina;
-    document.write("Valor gasolina: R$" +conversaoDeMoeda() + "<br>");
+    var PopUp = "Digite o valor do estacionamento";
+    var estacionamento = popUpNum();
+    var valor = estacionamento
+
+    function conversaoDeMoeda(){
+        var valor_convertido = valor.toFixed(2).replace(".",",");
+        return valor_convertido;
+    }
+    
+    document.write("Valor estacionamento: R$ " + conversaoDeMoeda() + "<br>");
+    
+    var PopUp = "Digite o valor da gasolina"
+    var gasolina = popUpNum();
+    var valor = gasolina
+    document.write("Valor gasolina: R$ " + conversaoDeMoeda() + "<br>");
     
     var valor_total_carro = estacionamento + gasolina;
-    var valor = valor_total_carro;
-    document.write("Valor total: R$ " +conversaoDeMoeda())
+    var valor = valor_total_carro
+    document.write("Valor total: R$ " + conversaoDeMoeda());
 
     document.write("<h4>Uber</h4>");
 
     var valor_padrao = 25.70;
     var valor = valor_padrao;
-    document.write("Valor padrão: R$ " +conversaoDeMoeda() + "<br>");
+    document.write("Valor padrão: R$ " + conversaoDeMoeda() + "<br>");
     
     var taxa_dinamica = 1.2;
     var valor = valor_padrao*taxa_dinamica;
     document.write("Taxa dinâmica: " + taxa_dinamica + "<br>")
-    document.write("Valor total: R$ " +conversaoDeMoeda());
+    document.write("Valor total: R$ " + conversaoDeMoeda());
 </script>
