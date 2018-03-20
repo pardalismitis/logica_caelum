@@ -1,42 +1,47 @@
 <meta charset="utf-8">
+<!--FUNCOES-->
+<script src ="biblioteca_funcoes_pH_2018_03d20.js"></script>
 <script>
-    function valorInseridoPeloUsuario(){
-        return parseFloat(prompt(mensagemPopUp).replace(",","."));
-    }
-    
+
+//DISTÂNCIA
     var mensagemPopUp = "Digite a distância a ser percorrida"; 
     var distancia = valorInseridoPeloUsuario();
     document.write("<h4>Distância:</h4> " + distancia + " km");
 
+//CUSTO COM CARRO
     document.write("<h4>Carros</h4>");
     
+//VALOR DO ESTACIONAMENTO
     var mensagemPopUp = "Digite o valor do estacionamento";
     var estacionamento = valorInseridoPeloUsuario();
     var valor = estacionamento;
 
-    function conversaoDeMoeda(){
-        return valor.toFixed(2).replace(".",",");
-    }
+    document.write("Valor estacionamento: R$ " + pontoParaVirgula() + "<br>");
     
-    document.write("Valor estacionamento: R$ " + conversaoDeMoeda() + "<br>");
-    
+//VALOR DA GASOLINA
     var mensagemPopUp = "Digite o valor da gasolina";
     var gasolina = valorInseridoPeloUsuario();
     var valor = gasolina;
-    document.write("Valor gasolina: R$ " + conversaoDeMoeda() + "<br>");
+    document.write("Valor gasolina: R$ " + pontoParaVirgula() + "<br>");
     
+//VALOR TOTAL - CARRO
     var valor_total_carro = estacionamento + gasolina;
     var valor = valor_total_carro;
-    document.write("Valor total: R$ " + conversaoDeMoeda());
+    document.write("Valor total: R$ " + pontoParaVirgula());
 
+//CUSTO COM UBER
     document.write("<h4>Uber</h4>");
 
+//VALOR PADRÃO
     var valor_padrao = 25.70;
     var valor = valor_padrao;
-    document.write("Valor padrão: R$ " + conversaoDeMoeda() + "<br>");
+    document.write("Valor padrão: R$ " + pontoParaVirgula() + "<br>");
     
+//TAXA DINÂMICA
     var taxa_dinamica = 1.2;
     var valor = valor_padrao*taxa_dinamica;
     document.write("Taxa dinâmica: " + taxa_dinamica + "<br>")
-    document.write("Valor total: R$ " + conversaoDeMoeda());
+
+//VALOR TOTAL - UBER
+    document.write("Valor total: R$ " + pontoParaVirgula());
 </script>
