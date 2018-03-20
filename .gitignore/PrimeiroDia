@@ -1,18 +1,35 @@
+<meta charset="utf-8">
+<!--Distância: 15km <br>-->
+<!--<h4>Carro</h4>-->
+<!--Valor estacionamento: R$ 15,00<br>-->
+<!--Valor gasolina: R$ 15,00<br>-->
+<!--Valor total: R$ 30,00-->
+
 <script>
-    var trajeto= 15;
-    document.write("Distância: "+trajeto+"km");
-    document.write("<h4>Carro</h4>");
-    var valor_estacionamento=17;
-    document.write("Valor estacionamento: R$"+valor_estacionamento+"<br>");
-    var valor_gasolina=15;
-    document.write("Valor gasolina: R$"+valor_gasolina+"<br>");
-    var valor_total_carro=valor_estacionamento+valor_gasolina;
-    document.write("Valor total: R$"+valor_total_carro.toFixed(2).replace(".",","));
+    var distancia = 15;
+    document.write("Distância: " + distancia + "km");
+    document.write("<h4>Carros</h4>")
+    
+    var estacionamento = 15.00;
+    function conversaoDeMoeda(){
+      var valor_estacionamento_convertido = estacionamento.toFixed(2).replace(".",",");
+      return valor_estacionamento_convertido;
+    }
+    //document.write("Valor estacionamento: R$ " + estacionamento.toFixed(2).replace(".",",") + "<br>");
+    
+    var gasolina = 15.00;
+    document.write("Valor gasolina: R$" + gasolina.toFixed(2).replace(".",",") + "<br>");
+    document.write("Valor total: R$ " + (estacionamento + gasolina).toFixed(2).replace(".",","))
+
     document.write("<h4>Uber</h4>");
-    var valor_padrao_uber=25.70;
-    document.write("Valor padrão: R$"+valor_padrao_uber.toFixed(2).replace(".",",")+"<br>");
-    var taxa_dinamica=1.2;
-    document.write("Taxa dinâmica: "+taxa_dinamica+"<br>");
-    var valor_total_uber=valor_padrao_uber*taxa_dinamica;
-    document.write("Valor total: R$"+valor_total_uber.toFixed(2).replace(".",","));
+//<!--Valor padrão: R$ 25.70<br>-->
+//<!--Taxa dinâmica: 1.2<br>-->
+//<!--Valor total: R$ 30.84-->
+
+    var valor_padrao = 25.70;
+    var taxa_dinamica = 1.2;
+    document.write("Valor padrão: R$ " + valor_padrao.toFixed(2).replace(".",",") + "<br>")
+    //toFixed(2) garante duas casas decimais (mas como texto). text.replace(antigo, novo)
+    document.write("Taxa dinâmica: " + taxa_dinamica + "<br>")
+    document.write("Valor total: R$ " + (valor_padrao*taxa_dinamica).toFixed(2).replace(".",","))
 </script>
