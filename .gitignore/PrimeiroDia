@@ -1,0 +1,18 @@
+<script>
+    var trajeto= 15;
+    document.write("Distância: "+trajeto+"km");
+    document.write("<h4>Carro</h4>");
+    var valor_estacionamento=17;
+    document.write("Valor estacionamento: R$"+valor_estacionamento+"<br>");
+    var valor_gasolina=15;
+    document.write("Valor gasolina: R$"+valor_gasolina+"<br>");
+    var valor_total_carro=valor_estacionamento+valor_gasolina;
+    document.write("Valor total: R$"+valor_total_carro.toFixed(2).replace(".",","));
+    document.write("<h4>Uber</h4>");
+    var valor_padrao_uber=25.70;
+    document.write("Valor padrão: R$"+valor_padrao_uber.toFixed(2).replace(".",",")+"<br>");
+    var taxa_dinamica=1.2;
+    document.write("Taxa dinâmica: "+taxa_dinamica+"<br>");
+    var valor_total_uber=valor_padrao_uber*taxa_dinamica;
+    document.write("Valor total: R$"+valor_total_uber.toFixed(2).replace(".",","));
+</script>
