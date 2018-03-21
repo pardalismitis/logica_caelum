@@ -7,6 +7,6 @@ function valorInseridoPeloUsuario(mensagemPopUp){
 
 //CONVERTE VALOR CALCULADO DE NÚMERO (FLOAT) PARA TEXTO (STRING) PARA EXIBIÇÃO NA TELA
 
-function pontoParaVirgula(){
+function pontoParaVirgula(valor){
     return valor.toFixed(2).replace(".",",");
 }
