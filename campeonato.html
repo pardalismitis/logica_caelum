@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<script src="https://rawgit.com/pardalismitis/logica_caelum/master/biblioteca_funcoes.js"></script>
+<script>
+    document.write("<h4>CAMPEONATO DE BOLINHAS DE GUDE</h4>")
+//TIME 01
+    var time1 = prompt("Digite o nome do time");
+    var vitorias = valorInseridoPeloUsuario("Digite o número de vitórias do time");
+    var empates = valorInseridoPeloUsuario("Digite o número de empates do time");
+    var pontos1 = (vitorias*3)+empates
+
+    document.write("<h4>"+time1+":</h4>")
+    document.write("Com " + vitorias + " vitórias e " + empates + " empates o time " + time1 + " tem " + "<b>"+ pontos1 + " pontos</b>.<br>");
+    
+    var ok = confirm("Deseja inserir informações de outro time?");
+//TIME 02
+    if (ok == true) {
+        var time2 = prompt("Digite o nome do time");
+        var vitorias = valorInseridoPeloUsuario("Digite o número de vitórias do time");
+        var empates = valorInseridoPeloUsuario("Digite o número de empates do time");
+        var pontos2 = (vitorias*3)+empates
+        
+        document.write("<h4>"+time2+":</h4>")
+        document.write("Com " + vitorias + " vitórias e " + empates + " empates o time " + time2 + " tem " + "<b>"+ pontos2 + " pontos</b>.<br>");
+    } 
+//COMPARAÇÃO    
+    if (pontos1 > pontos2) {
+        document.write("<br><h4>O time " + time1 + " está ganhando!</h4>")
+    }
+    if (pontos2 > pontos1) {
+        document.write("<br><h4>O time " + time2 + " está ganhando!</h4>")
+    }
+    if (pontos1 == pontos2) {
+        document.write("<br><h4>Os times estão empatados!</h4>")
+    }
+</script>
