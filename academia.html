@@ -4,16 +4,39 @@
     document.write("<h4>ACADEMIA MAROMBA</h4>")
 
     var nome = prompt("Digite o nome do aluno");
+    //var idade = prompt("Digite a idade do aluno");
+    var diaNascimento = prompt("Digite o dia do nascimento do aluno");
+    var mesNascimento = prompt("Digite o mês de nascimento do aluno");
+    var anoNascimento = prompt("Digite o ano de nascimento do aluno"); 
+
+    var altura  = valorInseridoPeloUsuario("Digite a altura do aluno (m)");
+    var peso    = valorInseridoPeloUsuario("Digite o peso do aluno (kg)");
+    var imc     = peso/(altura*altura);
+    
+    var dataAtual   = new Date();
+    var diaAtual    = dataAtual.getDate();
+    var mesAtual    = dataAtual.getMonth()+1;
+    var anoAtual    = dataAtual.getFullYear();
+
+    var idade = anoAtual - anoNascimento;
+    if(mesNascimento > mesAtual || (diaNascimento > diaAtual && mesNascimento == mesAtual)){
+        idade = idade - 1;
+    }
+    
+    /*if(mesNascimento < mesAtual){
+        idade = idade
+    }
+    if(diaNascimento <= diaAtual && mesNascimento == mesAtual){
+        idade = idade
+    }
+    if(diaNascimento > diaAtual && mesNascimento == mesAtual){
+        idade = idade - 1
+    }*/
+
     document.write("<b>Nome</b>: " + nome + "<br>");
-    var idade = prompt("Digite a idade do aluno");
     document.write("<b>Idade</b>: " + idade + "<br>");
     
-    var altura = valorInseridoPeloUsuario("Digite a altura do aluno (m)");
     document.write("<b>Altura</b>: " + pontoParaVirgula(altura) + "<br>");
-    
-    var peso = valorInseridoPeloUsuario("Digite o peso do aluno (kg)");
     document.write("<b>Peso</b>: " + pontoParaVirgula(peso) + "<br>");
-
-    var imc = peso/(altura*altura);
     document.write("<b>IMC</b> : " + pontoParaVirgula(imc) + "<br>");
 </script>
