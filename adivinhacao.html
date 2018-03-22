@@ -5,24 +5,32 @@
     <title>ADIVINHAÇÃO</title>    
 </head>
 <body>
+    <p><h4>JOGO DA ADIVINHAÇÃO.</h4></p>
     <script>
-        var numeroEscolhido = parseInt(Math.random()*11);
-        console.log(numeroEscolhido)
-        var chuteDigitado = prompt("Chute um número de 0 a 10");
+        //var numeroEscolhido = parseInt(Math.random()*11);
+        var numerosEscolhidos = [27, 5, 34, 79, 62, 41];
+        console.log(numerosEscolhidos)
+        var chuteDigitado = prompt("Chute um número de 0 a 100");
 
-        while(chuteDigitado > 10 || chuteDigitado < 0 || isNaN(chuteDigitado)){
+        while(chuteDigitado > 100 || chuteDigitado < 0 || isNaN(chuteDigitado)){
             alert("Valor inválido");
-            chuteDigitado = prompt("Digite um número de 0 a 10");
+            chuteDigitado = prompt("Digite um número de 0 a 100");
         }
-
         var chuteNumerico = parseInt(chuteDigitado);
 
-        if(chuteNumerico == numeroEscolhido){
-            var acertou = alert("ACERTOU! =D");
-            document.write("<h4>JOGO DA ADIVINHAÇÃO</h4><br>ACERTOU!<br>=D");
-        } else {
-            var errou = alert("ERROU! =/");
-            document.write("<h4>JOGO DA ADIVINHAÇÃO</h4><br>ERROU ENERGÚMENO!<br> =/");
+        var acertou = ("ACERTOU!<br>=D");
+        var errou = ("ERROU ENERGÚMENO!<br> =/");
+        var posicao = 0;
+        
+        while(posicao < numerosEscolhidos.length){
+            if(chuteNumerico == numerosEscolhidos[posicao]){
+                document.write(acertou);
+                break;
+            }
+            posicao = posicao + 1;
+        }
+        if(posicao >= 6){
+            document.write(errou)
         }
     </script>
 </body>
