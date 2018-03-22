@@ -2,21 +2,25 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ADIVINHAÇÃO</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <title>ADIVINHAÇÃO</title>    
 </head>
 <body>
     <script>
         var numeroEscolhido = parseInt(Math.random()*11);
-        document.write(numeroEscolhido)
-        var chute = parseInt(prompt("Chute um número de 0 a 10"));
-        if(chute == numeroEscolhido){
+        console.log(numeroEscolhido)
+        var chuteDigitado = prompt("Chute um número de 0 a 10");
+
+        while(chuteDigitado > 10 || chuteDigitado < 0 || isNaN(chuteDigitado)){
+            alert("Valor inválido");
+            chuteDigitado = prompt("Digite um número de 0 a 10");
+        }
+
+        var chuteNumerico = parseInt(chuteDigitado);
+
+        if(chuteNumerico == numeroEscolhido){
             var acertou = alert("ACERTOU! =D");
             document.write("<h4>JOGO DA ADIVINHAÇÃO</h4><br>ACERTOU!<br>=D");
-        } else{
+        } else {
             var errou = alert("ERROU! =/");
             document.write("<h4>JOGO DA ADIVINHAÇÃO</h4><br>ERROU ENERGÚMENO!<br> =/");
         }
