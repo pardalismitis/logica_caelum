@@ -4,11 +4,7 @@
     document.write("<h4>ACADEMIA MAROMBA</h4>")
 
     var nome = prompt("Digite o nome do aluno");
-    //var idade = prompt("Digite a idade do aluno");
-    /*var diaNascimento = prompt("Digite o dia do nascimento do aluno");
-    var mesNascimento = prompt("Digite o mês de nascimento do aluno");
-    var anoNascimento = prompt("Digite o ano de nascimento do aluno"); */
-
+    
     var dataNascimento = prompt("Digite a data de nascimento");
     var dataNascimentoSeparada = dataNascimento.split("/");
     
@@ -30,16 +26,6 @@
         idade = idade - 1;
     }
     
-    /*if(mesNascimento < mesAtual){
-        idade = idade
-    }
-    if(diaNascimento <= diaAtual && mesNascimento == mesAtual){
-        idade = idade
-    }
-    if(diaNascimento > diaAtual && mesNascimento == mesAtual){
-        idade = idade - 1
-    }*/
-
     document.write("<b>Nome</b>: " + nome + "<br>");
     document.write("<b>Idade</b>: " + idade + "<br>");
     
