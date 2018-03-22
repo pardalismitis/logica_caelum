@@ -5,9 +5,16 @@
 
     var nome = prompt("Digite o nome do aluno");
     //var idade = prompt("Digite a idade do aluno");
-    var diaNascimento = prompt("Digite o dia do nascimento do aluno");
+    /*var diaNascimento = prompt("Digite o dia do nascimento do aluno");
     var mesNascimento = prompt("Digite o mês de nascimento do aluno");
-    var anoNascimento = prompt("Digite o ano de nascimento do aluno"); 
+    var anoNascimento = prompt("Digite o ano de nascimento do aluno"); */
+
+    var dataNascimento = prompt("Digite a data de nascimento");
+    var dataNascimentoSeparada = dataNascimento.split("/");
+    
+    var diaNascimento = parseInt(dataNascimentoSeparada[0]);
+    var mesNascimento = parseInt(dataNascimentoSeparada[1]);
+    var anoNascimento = parseInt(dataNascimentoSeparada[2]);
 
     var altura  = valorInseridoPeloUsuario("Digite a altura do aluno (m)");
     var peso    = valorInseridoPeloUsuario("Digite o peso do aluno (kg)");
