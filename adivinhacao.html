@@ -14,9 +14,10 @@
         var chute = parseInt(prompt("Chute um número de 0 a 10"));
         if(chute == numero){
             var acertou = alert("ACERTOU! =D");
-        }
-        if (chute > numero || chute < numero) {
-            var errou = alert("ERROU! =/");            
+            document.write("<h4>JOGO DA ADIVINHAÇÃO</h4><br>ACERTOU!<br>=D");
+        } else{
+            var errou = alert("ERROU! =/");
+            document.write("<h4>JOGO DA ADIVINHAÇÃO</h4><br>ERROU ENERGÚMENO!<br> =/");
         }
     </script>
 </body>
