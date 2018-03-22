@@ -10,9 +10,10 @@
 </head>
 <body>
     <script>
-        var numero = 6
+        var numeroEscolhido = parseInt(Math.random()*11);
+        document.write(numeroEscolhido)
         var chute = parseInt(prompt("Chute um número de 0 a 10"));
-        if(chute == numero){
+        if(chute == numeroEscolhido){
             var acertou = alert("ACERTOU! =D");
             document.write("<h4>JOGO DA ADIVINHAÇÃO</h4><br>ACERTOU!<br>=D");
         } else{
